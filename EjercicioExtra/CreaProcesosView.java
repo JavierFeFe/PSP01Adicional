@@ -29,7 +29,7 @@ public class CreaProcesosView {
 			for (int i=0 ;i<procesos;i++) { //Inicio el bucle que abrirá los procesos
 				Runtime.getRuntime().exec("java -jar "+ archivo);
 			}
-		} catch (SecurityException ex) {
+		}catch (SecurityException ex) {
 			System.out.println("No se ha podido crear el proceso por falta de permisos.");
 		}catch (IOException e) {
 			// TODO Auto-generated catch block
