@@ -17,8 +17,7 @@ Propongo como tarea adicional realizar el mismo ejemplo que se realiza en el apa
 
 
 ![image](https://user-images.githubusercontent.com/44543081/47953080-8083f000-df78-11e8-84e0-55e05886c587.png)  
-*Identifico el sistema operativo, aunque en mi ejemplo no sería necesario ya que Windows reconoce las rutas de archivo con "/" o con "\".*
-
+*Identifico el sistema operativo, aunque en mi ejemplo no sería necesario ya que Windows reconoce las rutas de archivo con los dos tipos de barra oblicua.
 
 ![image](https://user-images.githubusercontent.com/44543081/47953100-cd67c680-df78-11e8-808b-9984d170f5b4.png)  
 *Compruebo que la aplicación exista en la ubicación preestablecida (identificando la carpeta home evito problemas para diferenciar rutas para distintos sistemas operativos, por lo que podria decir que es multiplataforma (por lo menos Windows, Linux y Mac))*
@@ -37,6 +36,6 @@ Propongo como tarea adicional realizar el mismo ejemplo que se realiza en el apa
 
 
 ![image](https://user-images.githubusercontent.com/44543081/47953371-0b66e980-df7d-11e8-8deb-30b3a8883aad.png)
-*Realizo prueba en una máquina linux mediante ssh*
+*Realizo prueba en una máquina linux mediante ssh (para comprobar las rutas de acceso)*
 
 **Se incluyen los archivos jar dentro de la carpeta build**
