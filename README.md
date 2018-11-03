@@ -1,5 +1,6 @@
 # Tarea para PSP01 (adicional)
 ## Detalles de la tarea de esta unidad.
+
 Propongo como tarea adicional realizar el mismo ejemplo que se realiza en el apartado 3.6 pero simplificándolo, y prescindiendo como digo de interface gráfica y facilitando la portabilidad entre diferentes máquinas (Linux, Windows y MacOS).
 
 
@@ -26,5 +27,8 @@ Propongo como tarea adicional realizar el mismo ejemplo que se realiza en el apa
 
 ![image](https://user-images.githubusercontent.com/44543081/47953167-efae1400-df79-11e8-9182-2c0f2bbd33eb.png)  
 *Pruebo la ejecución en Windows*
+
+![image](https://user-images.githubusercontent.com/44543081/47953371-0b66e980-df7d-11e8-8deb-30b3a8883aad.png)
+*Realizo prueba en una máquina linux mediante ssh*
 
 **Se incluyen los archivos jar dentro de la carpeta build**
