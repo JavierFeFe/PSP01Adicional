@@ -5,9 +5,9 @@ import java.io.IOException;
 public class CreaProcesosView {
 	
 	public static void main(String[] args) {
-		int procesos = 1;//Nº de ejecuciones por defecto
+		int procesos = 1;//NÂº de ejecuciones por defecto
 		String slash;
-		//Esta parte no sería necesaria, ya que Windows reconoce las rutas con / en lugar de \, lo incorporo simplemente como ejemplo.
+		//Esta parte no serÃ­a necesaria, ya que Windows reconoce las rutas con / en lugar de \, lo incorporo simplemente como ejemplo.
 		if (System.getProperty("os.name").toUpperCase().contains("WIN")) {
 			slash = "\\";
 		}else {
@@ -19,14 +19,14 @@ public class CreaProcesosView {
 			System.out.println("ERROR: La aplicacion "+ archivo.getName()+ " debe estar ubicada en: " +archivo.getParent());
 			return;
 		}
-		if (args.length == 1 && args[0].matches("\\d+")) { //Comprueba que los parámetros introducidos sean correctos
+		if (args.length == 1 && args[0].matches("\\d+")) { //Comprueba que los parÃ¡metros introducidos sean correctos
 			procesos = Integer.parseInt(args[0]);
 		}else {
-			System.out.println("No se especificó el nº de procesos, se ejecutará el valor por defecto: " + procesos);
-			System.out.println("Parámetros: Java -jar CreaProcesosView.jar <n> nº de procesos simultaneos");
+			System.out.println("No se especificÃ³ el nÂº de procesos, se ejecutarÃ¡ el valor por defecto: " + procesos);
+			System.out.println("ParÃ¡metros: Java -jar CreaProcesosView.jar <n> nÂº de procesos simultaneos");
 		}
 		try {
-			for (int i=0 ;i<procesos;i++) { //Inicio el bucle que abrirá los procesos
+			for (int i=0 ;i<procesos;i++) { //Inicio el bucle que abrirÃ¡ los procesos
 				Runtime.getRuntime().exec("java -jar "+ archivo);
 			}
 		} catch (SecurityException ex) {
