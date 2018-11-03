@@ -27,4 +27,4 @@ Propongo como tarea adicional realizar el mismo ejemplo que se realiza en el apa
 ![image](https://user-images.githubusercontent.com/44543081/47953167-efae1400-df79-11e8-9182-2c0f2bbd33eb.png)  
 *Pruebo la ejecución en Windows*
 
-## **Se incluyen los archivos jar dentro de la carpeta build**
+**Se incluyen los archivos jar dentro de la carpeta build**
