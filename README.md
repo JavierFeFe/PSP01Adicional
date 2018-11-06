@@ -12,26 +12,52 @@ Propongo como tarea adicional realizar el mismo ejemplo que se realiza en el apa
 *Copio el jar generado desde Netbeans a la carpeta "prueba" dentro del usuario.*
 
 
-![image](https://user-images.githubusercontent.com/44543081/47953072-431f6280-df78-11e8-9664-e7113a083f66.png)  
+```Java
+public static void main(String[] args) {
+  int procesos = 1;//Nº de ejecuciones por defecto
+```
 *Creo una nueva clase en Eclipse llamada CreaProcesosView que incluya el método main.*
 
+```Java
+if (System.getProperty("os.name").toUpperCase().contains("WIN")) {
+  slash = "\\";
+}else {
+  slash = "/";
+}
+```
+*Identifico el sistema operativo, (aunque en mi ejemplo no sería necesario ya que Windows reconoce las rutas de archivo con los dos tipos de barra oblicua).
 
-![image](https://user-images.githubusercontent.com/44543081/47953080-8083f000-df78-11e8-84e0-55e05886c587.png)  
-*Identifico el sistema operativo, aunque en mi ejemplo no sería necesario ya que Windows reconoce las rutas de archivo con los dos tipos de barra oblicua.
-
-![image](https://user-images.githubusercontent.com/44543081/47953100-cd67c680-df78-11e8-808b-9984d170f5b4.png)  
+```Java
+if (!archivo.exists()){
+  System.out.println("ERROR: La aplicacion "+ archivo.getName()+ " debe estar ubicada en: " +archivo.getParent());
+  return;
+}
+```
 *Compruebo que la aplicación exista en la ubicación preestablecida (identificando la carpeta home evito problemas para diferenciar rutas para distintos sistemas operativos, por lo que podria decir que es multiplataforma (por lo menos Windows, Linux y Mac))*
 
 
-![image](https://user-images.githubusercontent.com/44543081/47953113-fdaf6500-df78-11e8-944a-1412e2be4eff.png)  
-*Identifico los parámetros de ejecución, en caso de no introducirlos se ejecutará con los parámetros por defecto.
+```Java
+if (args.length == 1 && args[0].matches("\\d+")) { //Comprueba que los parámetros introducidos sean correctos
+  procesos = Integer.parseInt(args[0]);
+}else {
+  System.out.println("No se especificó el nº de procesos, se ejecutará el valor por defecto: " + procesos);
+  System.out.println("Parámetros: Java -jar CreaProcesosView.jar <n> nº de procesos simultaneos");
+}
+```
+*Identifico los parámetros de ejecución. En caso de no introducirlos se ejecutará con los parámetros por defecto.
 
-
-![image](https://user-images.githubusercontent.com/44543081/47953118-29cae600-df79-11e8-8f90-df9c4a50f91f.png)  
+```Java
+for (int i=0 ;i<procesos;i++) { //Inicio el bucle que abrirá los procesos
+  Runtime.getRuntime().exec("java -jar "+ archivo);
+}
+```
 *Inicio el bucle de ejecución*
 
 
 ![image](https://user-images.githubusercontent.com/44543081/47953167-efae1400-df79-11e8-9182-2c0f2bbd33eb.png)  
+```
+java -jar CreaProcesosView.jar 4
+```
 *Pruebo la ejecución en Windows*
 
 
