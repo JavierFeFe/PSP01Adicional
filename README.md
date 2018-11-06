@@ -25,7 +25,7 @@ if (System.getProperty("os.name").toUpperCase().contains("WIN")) {
   slash = "/";
 }
 ```
-*Identifico el sistema operativo, (aunque en mi ejemplo no sería necesario ya que Windows reconoce las rutas de archivo con los dos tipos de barra oblicua).
+*Identifico el sistema operativo, (aunque en mi ejemplo no sería necesario ya que Windows reconoce las rutas de archivo con los dos tipos de barra oblicua).*  
 
 ```Java
 if (!archivo.exists()){
