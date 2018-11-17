@@ -17,7 +17,7 @@ public class CreaProcesosView {
 		File archivo = new File(proces);
 		if (!archivo.exists()){
 			System.out.println("ERROR: La aplicacion "+ archivo.getName()+ " debe estar ubicada en: " +archivo.getParent());
-			return;
+			System.exit(0);
 		}
 		if (args.length == 1 && args[0].matches("\\d+")) { //Comprueba que los parámetros introducidos sean correctos
 			procesos = Integer.parseInt(args[0]);
