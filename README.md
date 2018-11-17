@@ -30,7 +30,7 @@ if (System.getProperty("os.name").toUpperCase().contains("WIN")) {
 ```Java
 if (!archivo.exists()){
   System.out.println("ERROR: La aplicacion "+ archivo.getName()+ " debe estar ubicada en: " +archivo.getParent());
-  return;
+  System.exit(0);
 }
 ```
 *Compruebo que la aplicación exista en la ubicación preestablecida (identificando la carpeta home evito problemas para diferenciar rutas para distintos sistemas operativos, por lo que podria decir que es multiplataforma (por lo menos Windows, Linux y Mac))*
